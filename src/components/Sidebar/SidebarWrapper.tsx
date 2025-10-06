@@ -8,7 +8,7 @@ export default function SidebarWrapper(props: { children: ReactNode }) {
   return (
     <nav
       data-collapse={collapse}
-      className="relative bg-background h-[90%] rounded-[10px] border p-5 data-[collapse=true]:h-full transition-all duration-500"
+      className="relative bg-background h-[90%] rounded-[10px] border p-5 pb-3 data-[collapse=true]:h-full transition-all duration-500"
     >
       {props.children}
     </nav>
