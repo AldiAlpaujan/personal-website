@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Onest } from 'next/font/google';
 import './globals.css';
 import Sidebar from '@/components/Sidebar/Sidebar';
-import { ThemeProvider } from '@/stores/theme';
+import { ThemeProvider } from '@/stores/ThemeContext';
 
 const onestSans = Onest({
   variable: '--font-onest',
