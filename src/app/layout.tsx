@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Onest } from 'next/font/google';
 import './globals.css';
+import Sidebar from '@/components/Sidebar/Sidebar';
 import { ThemeProvider } from '@/stores/theme';
 
 const onestSans = Onest({
@@ -19,11 +20,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${onestSans.variable} ${onestSans.className} relative h-full w-full antialiased`}
+        className={`${onestSans.variable} ${onestSans.className} relative h-fit w-full antialiased`}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <div className="fixed inset-0 -z-10 bg-background opacity-30 bg-[radial-gradient(#757575_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <ThemeProvider>
+          <div className="h-full w-full bg-transparent">
+            <div className="container m-auto h-full grid grid-cols-10 gap-6">
+              <div className="h-screen sticky top-0 w-full col-span-4 grid grid-cols-5 gap-2">
+                <div className="h-full w-full col-start-3 col-span-3 p-14 pr-0">
+                  <Sidebar />
+                </div>
+              </div>
+
+              <div className="h-full w-full col-span-6 grid grid-cols-6 gap-6 ">
+                <div className="h-full w-full col-span-5 p-14 pl-0 pb-0">
+                  <main>{children}</main>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
