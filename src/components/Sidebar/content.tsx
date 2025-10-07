@@ -56,23 +56,23 @@ interface SocialMedia {
 
 export const socialMedia: SocialMedia[] = [
   {
-    title: 'Instagram',
-    url: 'https://www.instagram.com/aldialpaujan',
-    icon: <span className="icon-[iconoir--instagram] size-6" />,
+    title: 'Linkedin',
+    url: 'https://www.linkedin.com/in/aldi-m-alpaujan',
+    icon: <span className="icon-[meteor-icons--linkedin] size-4" />,
   },
   {
     title: 'Whatsapp',
     url: 'https://wa.me/6285156496541',
-    icon: <span className="icon-[meteor-icons--whatsapp] size-5" />,
+    icon: <span className="icon-[meteor-icons--whatsapp] size-4" />,
   },
   {
-    title: 'Linkedin',
-    url: 'https://www.linkedin.com/in/aldi-m-alpaujan',
-    icon: <span className="icon-[meteor-icons--linkedin] size-5" />,
+    title: 'Instagram',
+    url: 'https://www.instagram.com/aldialpaujan',
+    icon: <span className="icon-[iconoir--instagram] size-5" />,
   },
   {
     title: 'Github',
     url: 'https://github.com/AldiAlpaujan',
-    icon: <span className="icon-[mingcute--github-line] size-6" />,
+    icon: <span className="icon-[mingcute--github-line] size-5" />,
   },
 ];

@@ -28,11 +28,10 @@ export default function SidebarMenu() {
                 key={idx}
                 data-active={isActive}
                 variant={'sidebar'}
-                size={'lg'}
                 className="group gap-3 w-full"
               >
-                <menu.icon className="size-5 group-hover:rotate-[-15deg] transition-all duration-500" />
-                <p className="flex-1 text-start text-base">{menu.title}</p>
+                <menu.icon className="size-[18px] group-hover:rotate-[-15deg] transition-all duration-500" />
+                <p className="flex-1 text-start text-sm">{menu.title}</p>
                 {isActive && <ChevronRight />}
               </Button>
             </Link>
@@ -45,7 +44,7 @@ export default function SidebarMenu() {
         <div className="flex gap-2.5">
           {socialMedia.map((menu, idx) => {
             return (
-              <Link key={idx} href={menu.url}>
+              <Link key={idx} href={menu.url} target="_blank">
                 <Button
                   size={'icon'}
                   className="text-sidebar-foreground bg-sidebar-menu hover:text-sidebar-foreground hover:bg-sidebar-menu"

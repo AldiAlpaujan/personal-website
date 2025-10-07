@@ -20,13 +20,16 @@ export default function ThemeToggle() {
 
   return (
     <Button
-      size={'lg'}
       data-active={true}
       variant={'sidebar'}
       onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
     >
-      {resolvedTheme === 'dark' ? <MoonIcon className="size-5" /> : <SunIcon className="size-5" />}
-      <p className="flex-1 text-start text-base">{capitalizeText(resolvedTheme ?? '')}</p>
+      {resolvedTheme === 'dark' ? (
+        <MoonIcon className="size-[18px]" />
+      ) : (
+        <SunIcon className="size-[18px]" />
+      )}
+      <p className="flex-1 text-start text-sm">{capitalizeText(resolvedTheme ?? '')}</p>
       <ChevronsLeftRight />
     </Button>
   );

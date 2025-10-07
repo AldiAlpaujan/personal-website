@@ -8,7 +8,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-primary text-primary-foreground hover:bg-primary/90',
+        default:
+          'bg-background text-tertiary-foreground border-[1.9px] hover:bg-background hover:scale-105',
         sidebar:
           'justify-start bg-transparent text-secondary-foreground hover:text-sidebar-foreground hover:bg-sidebar-menu data-[active=true]:text-sidebar-foreground data-[active=true]:bg-sidebar-menu',
         destructive:
