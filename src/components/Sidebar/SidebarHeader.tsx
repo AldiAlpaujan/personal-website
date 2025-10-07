@@ -15,7 +15,7 @@ export default function SidebarHeader() {
         src={photo}
         alt="my photo"
         data-collapse={collapse}
-        className="rounded-lg size-40 transition-all duration-500 data-[collapse=true]:size-20 data-[collapse=true]:rounded-[40px]"
+        className="rounded-lg size-32 lg:size-36 2xl:size-40 transition-all duration-500 data-[collapse=true]:size-16 data-[collapse=true]:lg:size-18 data-[collapse=true]:2xl:size-20 data-[collapse=true]:rounded-[40px]"
       />
       <div className="flex flex-col items-center gap-0.5 transition-all duration-500">
         <h1 className="font-bold text-lg">Aldi Muhamad Alpaujan</h1>

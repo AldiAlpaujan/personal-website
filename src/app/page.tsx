@@ -12,7 +12,42 @@ export default function Home() {
           </div>
         }
       />
-      <div className="w-full bg-red-50/10 h-[1000px]" />
+      <div className="p-4 bg-background border-[1.8px] rounded-lg">
+        I’m software engineer specializing in frontend development, passionate and results-driven
+        Frontend Developer with 3+ years of experience specializing in building responsive and
+        dynamic web and mobile applications. Proficient in modern frameworks including React/Next.js
+        and Flutter. Eager to leverage a diverse skill set to create exceptional user experiences.
+      </div>
+      <div className="p-4 bg-background border-[1.8px] rounded-lg">
+        I’m software engineer specializing in frontend development, passionate and results-driven
+        Frontend Developer with 3+ years of experience specializing in building responsive and
+        dynamic web and mobile applications. Proficient in modern frameworks including React/Next.js
+        and Flutter. Eager to leverage a diverse skill set to create exceptional user experiences.
+      </div>
+      <div className="p-4 bg-background border-[1.8px] rounded-lg">
+        I’m software engineer specializing in frontend development, passionate and results-driven
+        Frontend Developer with 3+ years of experience specializing in building responsive and
+        dynamic web and mobile applications. Proficient in modern frameworks including React/Next.js
+        and Flutter. Eager to leverage a diverse skill set to create exceptional user experiences.
+      </div>
+      <div className="p-4 bg-background border-[1.8px] rounded-lg">
+        I’m software engineer specializing in frontend development, passionate and results-driven
+        Frontend Developer with 3+ years of experience specializing in building responsive and
+        dynamic web and mobile applications. Proficient in modern frameworks including React/Next.js
+        and Flutter. Eager to leverage a diverse skill set to create exceptional user experiences.
+      </div>
+      <div className="p-4 bg-background border-[1.8px] rounded-lg">
+        I’m software engineer specializing in frontend development, passionate and results-driven
+        Frontend Developer with 3+ years of experience specializing in building responsive and
+        dynamic web and mobile applications. Proficient in modern frameworks including React/Next.js
+        and Flutter. Eager to leverage a diverse skill set to create exceptional user experiences.
+      </div>
+      <div className="p-4 bg-background border-[1.8px] rounded-lg">
+        I’m software engineer specializing in frontend development, passionate and results-driven
+        Frontend Developer with 3+ years of experience specializing in building responsive and
+        dynamic web and mobile applications. Proficient in modern frameworks including React/Next.js
+        and Flutter. Eager to leverage a diverse skill set to create exceptional user experiences.
+      </div>
     </>
   );
 }

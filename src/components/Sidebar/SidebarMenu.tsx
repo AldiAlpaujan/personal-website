@@ -16,7 +16,7 @@ export default function SidebarMenu() {
   return (
     <div
       data-collapse={collapse}
-      className="h-full transition-all duration-500 pt-[140px] flex flex-col gap-3 data-[collapse=true]:pt-[160px]"
+      className="h-full transition-all duration-500 flex flex-col gap-3 pt-[105px] lg:pt-[120px] 2xl:pt-[140px] data-[collapse=true]:pt-[160px]"
     >
       <Separator />
       <div className="flex flex-col gap-2">
