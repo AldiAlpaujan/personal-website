@@ -33,7 +33,7 @@ export const menu: SidebarMenuItem[] = [
   },
   {
     title: 'About',
-    url: '/about-me',
+    url: '/about',
     icon: User,
   },
   {

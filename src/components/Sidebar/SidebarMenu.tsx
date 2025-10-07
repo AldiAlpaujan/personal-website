@@ -58,7 +58,10 @@ export default function SidebarMenu() {
         </div>
       </div>
       <Separator />
-      <ThemeToggle />
+      <div className="flex flex-col gap-1.5">
+        <p className="text-start text-sm font-medium text-secondary-foreground">Theme</p>
+        <ThemeToggle />
+      </div>
     </div>
   );
 }
