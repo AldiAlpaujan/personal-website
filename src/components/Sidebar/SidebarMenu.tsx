@@ -47,7 +47,7 @@ export default function SidebarMenu() {
               <Link key={idx} href={menu.url} target="_blank">
                 <Button
                   size={'icon'}
-                  className="text-sidebar-foreground bg-sidebar-menu hover:text-sidebar-foreground hover:bg-sidebar-menu"
+                  className="text-sidebar-foreground bg-sidebar-menu border hover:text-sidebar-foreground hover:bg-sidebar-menu dark:border-0"
                 >
                   {menu.icon}
                 </Button>

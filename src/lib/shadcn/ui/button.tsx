@@ -11,7 +11,7 @@ const buttonVariants = cva(
         default:
           'bg-background text-tertiary-foreground border-[1.9px] hover:bg-background hover:scale-105',
         sidebar:
-          'justify-start bg-transparent text-secondary-foreground hover:text-sidebar-foreground hover:bg-sidebar-menu data-[active=true]:text-sidebar-foreground data-[active=true]:bg-sidebar-menu',
+          'justify-start bg-background text-secondary-foreground hover:text-sidebar-foreground hover:bg-sidebar-menu data-[active=true]:text-sidebar-foreground data-[active=true]:bg-sidebar-menu data-[active=true]:border dark:border-none',
         destructive:
           'bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60',
         outline:

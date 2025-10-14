@@ -47,6 +47,7 @@
   --radius-xl: calc(var(--radius) + 4px);
   --color-scrollbar-background: var(--scrollbar-background);
   --color-scrollbar-foreground: var(--scrollbar-foreground);
+  --color-project-card: var(--project-card);
 }
 
 :root {
@@ -92,13 +93,16 @@
   --sidebar-primary: oklch(0.205 0 0);
   --sidebar-primary-foreground: oklch(0.985 0 0);
 
-  --sidebar-menu: oklch(43.9% 0 0 / 0.1);
+  /* --sidebar-menu: oklch(43.9% 0 0 / 0.1); */
+  --sidebar-menu: oklch(0.9672 0 0 / 44.31%);
 
   --sidebar-accent: oklch(0.97 0 0);
   --sidebar-accent-foreground: oklch(0.205 0 0);
 
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  --project-card: oklch(1 0 0);
 }
 
 .dark {
@@ -150,6 +154,8 @@
 
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+  --project-card: oklch(0.2046 0 0);
 }
 
 @layer base {
@@ -183,4 +189,14 @@
 
 *::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Sembunyikan scrollbar di Firefox & IE */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE dan Edge */
+  scrollbar-width: none; /* Firefox */
 }

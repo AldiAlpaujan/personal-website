@@ -28,7 +28,7 @@ export default function AppLayout({
           </div>
 
           <div className="h-full  w-full col-span-10 md:col-span-6 grid grid-cols-6 gap-6 ">
-            <div className="h-full w-full col-span-6 md:pt-10 xl:col-span-5 lg:pr-10 2xl:pt-14 xl:pr-14">
+            <div className="h-full w-full col-span-6 md:pt-10 md:pr-10 xl:col-span-5 lg:pr-10 2xl:pt-14 xl:pr-14">
               <main className="flex flex-col gap-3.5 p-4 md:p-0">{children}</main>
             </div>
           </div>

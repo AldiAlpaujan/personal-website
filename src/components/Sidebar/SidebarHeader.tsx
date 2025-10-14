@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import photo from '@/assets/my photo.png';
 import { useSidebarContext } from '@/stores/SidebarContext';
 
 export default function SidebarHeader() {
@@ -12,7 +11,9 @@ export default function SidebarHeader() {
       className="absolute top-[-80px]  left-0 right-0 transition-all duration-500 flex flex-col items-center justify-center gap-3.5 data-[collapse=true]:top-5 "
     >
       <Image
-        src={photo}
+        src={'/images/photo.png'}
+        width={128}
+        height={128}
         alt="my photo"
         data-collapse={collapse}
         className="rounded-lg size-32 lg:size-36 2xl:size-40 transition-all duration-500 data-[collapse=true]:size-16 data-[collapse=true]:lg:size-18 data-[collapse=true]:2xl:size-20 data-[collapse=true]:rounded-[40px]"
