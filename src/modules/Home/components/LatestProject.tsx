@@ -1,7 +1,7 @@
 import Link from 'next/link';
+import ProjectCard from '@/components/ProjectCard';
 import { Card, CardTitle } from '@/lib/shadcn/ui/card';
 import { Project } from '@/types/project';
-import ProjectCard from '../ProjectCard';
 
 export default function LatestProject() {
   const projects: Project[] = [

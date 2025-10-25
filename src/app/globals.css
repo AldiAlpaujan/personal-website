@@ -48,6 +48,24 @@
   --color-scrollbar-background: var(--scrollbar-background);
   --color-scrollbar-foreground: var(--scrollbar-foreground);
   --color-project-card: var(--project-card);
+  --animate-marquee: marquee 100s infinite linear;
+  --animate-marquee-vertical: marquee-vertical 100s linear infinite;
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
 }
 
 :root {

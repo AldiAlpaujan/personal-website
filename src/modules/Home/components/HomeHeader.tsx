@@ -1,4 +1,4 @@
-import PageHeader from '../PageHeader';
+import PageHeader from '@/components/PageHeader';
 
 export default function HomeHeader() {
   return (

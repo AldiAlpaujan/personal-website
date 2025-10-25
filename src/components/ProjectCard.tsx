@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { cn } from '@/lib/shadcn/utils';
-import { TechIcons } from '@/lib/shadcn/variable';
+import { techIcons } from '@/lib/shadcn/variable';
 import { Project } from '@/types/project';
 
 export default function ProjectCard({
@@ -34,7 +34,7 @@ export default function ProjectCard({
       </div>
       <div className="flex px-2.5 mb-2.5 gap-2">
         {project.techUsed.map((tech, idx) => {
-          const techIcon = TechIcons.find((icon) => icon.name === tech)!;
+          const techIcon = techIcons.find((icon) => icon.name === tech)!;
           return (
             <Image
               key={idx}
