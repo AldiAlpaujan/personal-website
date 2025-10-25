@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import Link from 'next/link';
 import { DownloadIcon, Phone } from 'lucide-react';
 import { Button } from '@/lib/shadcn/ui/button';
+import SidebarToggle from './Sidebar/SidebarToggle';
 
 export default function PageHeader(props: {
   title: string;
@@ -15,13 +16,16 @@ export default function PageHeader(props: {
         <h1 className="mb-0.5 text-2xl font-bold">{props.title}</h1>
         {typeof props.description === 'string' ? <p>{props.description}</p> : props.description}
       </div>
-      <div className="flex gap-2.5">
+      <div className="md:hidden">
+        <SidebarToggle />
+      </div>
+      <div className="hidden md:flex gap-2.5">
         {!props.hideCvButton && (
           <Link
             href="https://drive.google.com/file/d/141QU50SAi5MLwRD8IbkeMtNAKETrOZrp/view?usp=drive_link"
             target="_blank"
           >
-            <Button className="bg-background text-tertiary-foreground border-[1.9px] hover:bg-background hover:scale-105">
+            <Button>
               <DownloadIcon />
               Download Cv
             </Button>

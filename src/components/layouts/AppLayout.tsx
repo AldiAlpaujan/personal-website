@@ -2,7 +2,9 @@
 
 import { ReactNode, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import SidebarContextProvider from '@/stores/SidebarContext';
 import { ThemeProvider } from '@/stores/ThemeContext';
+import SidebarMobile from '../Sidebar/SidebarMobile';
 
 export default function AppLayout({
   sidebar,
@@ -19,21 +21,24 @@ export default function AppLayout({
 
   return (
     <ThemeProvider>
-      <div className="h-full w-full bg-transparent">
-        <div className="container m-auto h-full grid grid-cols-10 gap-6">
-          <div className="hidden h-screen sticky top-0 w-full col-span-4 md:grid md:grid-cols-5 md:gap-2">
-            <div className="h-full w-full col-span-5 py-10 pl-10 lg:py-12 lg:pl-12 2xl:py-14 2xl:pl-14 lg:col-start-2 lg:col-span-4 xl:col-start-3 xl:col-span-3 ">
-              {sidebar}
+      <SidebarContextProvider>
+        <SidebarMobile />
+        <div id="main-layout" className="h-full w-full bg-transparent transition-all duration-500">
+          <div className="container m-auto h-full grid grid-cols-10 gap-6">
+            <div className="hidden h-screen sticky top-0 w-full col-span-4 md:grid md:grid-cols-5 md:gap-2">
+              <div className="h-full w-full col-span-5 py-10 pl-10 lg:py-12 lg:pl-12 2xl:py-14 2xl:pl-14 lg:col-start-2 lg:col-span-4 xl:col-start-3 xl:col-span-3 ">
+                {sidebar}
+              </div>
             </div>
-          </div>
 
-          <div className="h-full  w-full col-span-10 md:col-span-6 grid grid-cols-6 gap-6 ">
-            <div className="h-full w-full col-span-6 md:pt-10 md:pr-10 xl:col-span-5 lg:pr-10 2xl:pt-14 xl:pr-14">
-              <main className="flex flex-col mb-5 gap-3.5 p-4 md:p-0">{children}</main>
+            <div className="h-full  w-full col-span-10 md:col-span-6 grid grid-cols-6 gap-6">
+              <div className="h-full w-full col-span-6 md:pt-10 md:pr-10 xl:col-span-5 lg:pr-10 2xl:pt-14 xl:pr-14">
+                <main className="flex flex-col gap-3.5 p-4 md:p-0 md:mb-5">{children}</main>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </SidebarContextProvider>
     </ThemeProvider>
   );
 }

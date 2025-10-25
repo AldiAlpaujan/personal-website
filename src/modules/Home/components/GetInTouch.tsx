@@ -4,7 +4,7 @@ import { Card, CardDescription, CardTitle } from '@/lib/shadcn/ui/card';
 
 export default function GetInTouch() {
   return (
-    <Card className="bg-project-card border-0">
+    <Card className="bg-project-card dark:border-0">
       <CardTitle className="text-foreground">Get In Touch</CardTitle>
       <CardDescription>
         Ready to take the next step? Don&apos;t hesitate to reach out if you&apos;re looking for a
