@@ -24,7 +24,9 @@ export default function SidebarMobile() {
             <SidebarHeader />
             <SidebarToggle />
           </div>
-          <SidebarMenu />
+          <div className="md:hidden">
+            <SidebarMenu />
+          </div>
         </nav>
       </div>
     </>

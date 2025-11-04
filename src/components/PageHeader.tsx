@@ -14,7 +14,11 @@ export default function PageHeader(props: {
     <div className="flex items-center justify-between">
       <div>
         <h1 className="mb-0.5 text-2xl font-bold">{props.title}</h1>
-        {typeof props.description === 'string' ? <p>{props.description}</p> : props.description}
+        {typeof props.description === 'string' ? (
+          <p className="text-sm text-tertiary-foreground">{props.description}</p>
+        ) : (
+          props.description
+        )}
       </div>
       <div className="md:hidden">
         <SidebarToggle />
