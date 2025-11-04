@@ -32,7 +32,6 @@ export const projects: Project[] = [
     description:
       'A modern personal website built with Next.js and React, showcasing my portfolio, projects, and skills. It features a clean and responsive design, smooth navigation, and reusable components styled with Tailwind CSS and Shadcn UI. The site is fully type-safe with TypeScript for better maintainability.',
     techUsed: ['nextjs', 'reactjs', 'typescript', 'tailwindcss', 'shadcn'],
-    link: '',
   },
   {
     image: '/projects/my-kbihu.png',
@@ -56,7 +55,7 @@ export const projects: Project[] = [
     description:
       'My first web portfolio is a website I created to showcase my skills, expertise, and past projects, aimed at attracting potential clients.',
     techUsed: ['reactjs', 'tailwindcss', 'typescript', 'vite'],
-    link: '',
+    link: 'https://aldi-portfolio.vercel.app/',
   },
   {
     image: '/projects/balance-keeper.png',
@@ -64,7 +63,6 @@ export const projects: Project[] = [
     description:
       'Balance Keeper is a personal finance app designed to track your expenses and manage your assets with ease. Stay in control of your financial health effortlessly.',
     techUsed: ['flutter', 'dart', 'sqlite', 'firebase'],
-    link: '',
   },
   {
     image: '/projects/balance-keeper-cms.png',
@@ -72,7 +70,6 @@ export const projects: Project[] = [
     description:
       'Balance Keeper CMS is an internal application designed to manage the Balance Keeper app and landing page content, as well as analyze data efficiently.',
     techUsed: ['flutter', 'typescript', 'mui', 'express', 'prisma', 'mysql', 'vite'],
-    link: '',
   },
   {
     image: '/projects/ehya.png',
@@ -88,7 +85,6 @@ export const projects: Project[] = [
     description:
       'Minimarketku is an e-commerce app project that offers the convenience of purchasing items from home without the need to visit the main store.',
     techUsed: ['flutter', 'dart', 'firebase'],
-    link: '',
   },
   {
     image: '/projects/db-owner.png',
@@ -112,7 +108,6 @@ export const projects: Project[] = [
     description:
       "RZF Canvasing is a sales support app designed to assist salespeople and cashiers in making transactions outside the store, seamlessly connected to the company's desktop application.",
     techUsed: ['flutter', 'dart'],
-    link: '',
   },
   {
     image: '/projects/rzf-resto.png',
@@ -120,6 +115,5 @@ export const projects: Project[] = [
     description:
       'RZF Resto is a POS app specifically designed for restaurants and cafes, seamlessly connected to a web application for streamlined management.',
     techUsed: ['flutter', 'dart', 'firebase'],
-    link: '',
   },
 ];
