@@ -1,6 +1,9 @@
+import { Career } from '@/types/career';
+import { Education } from '@/types/education';
 import { Project } from '@/types/project';
 
 export type TechIconType = { name: string; label: string; icon: string; themeCamo?: boolean };
+
 export const techIcons: TechIconType[] = [
   { name: 'css', label: 'Css', icon: '/tech-icons/css.svg' },
   { name: 'dart', label: 'Dart', icon: '/tech-icons/dart.svg' },
@@ -48,6 +51,14 @@ export const projects: Project[] = [
       'KBIHU is a management app designed to let customers join training programs, and check their estimated departure year.',
     techUsed: ['flutter', 'dart', 'firebase'],
     link: 'https://play.google.com/store/apps/details?id=com.di.kbihu&pcampaignid=web_share',
+  },
+  {
+    image: '/projects/onepro.png',
+    title: 'OnePro',
+    description:
+      'One Pro is a procurement management app designed to streamline purchasing processes, manage vendor data, and monitor order progress efficiently.',
+    techUsed: ['reactjs', 'typescript', 'mantine', 'vite'],
+    link: '',
   },
   {
     image: '/projects/portfolio.png',
@@ -115,5 +126,59 @@ export const projects: Project[] = [
     description:
       'RZF Resto is a POS app specifically designed for restaurants and cafes, seamlessly connected to a web application for streamlined management.',
     techUsed: ['flutter', 'dart', 'firebase'],
+  },
+];
+
+export const careers: Career[] = [
+  {
+    image: '/careers/cerebrum.png',
+    title: 'Mobile Engineer',
+    linkTitle: 'Cerebrum.id',
+    link: 'https://cerebrum.id',
+    company: 'PT Cerebrum Edukanesia Nusantara ',
+    location: 'Bandung, Indonesia',
+    countryCode: 'ID',
+    startDate: new Date('2024-10-01'),
+    endDate: new Date('2025-09-1'),
+    workingType: 'Full-time',
+    workingSchema: 'Onsite',
+    responsibilities: [
+      'Developed 15+ educational mobile applications using Flutter that empower users to achieve their dream goals, such as entering top universities, becoming an ASN, working at BUMN, and more.',
+      'Built applications focusing on high performance, scalability, and delivering a seamless user experience across Android and iOS platforms.',
+      'Collaborated closely with UI/UX designers and backend developers to ensure consistent design implementation and robust API integrations.',
+      'Developed Manakor, a mobile ERP (Enterprise Resource Planning) solution aimed at improving and streamlining the company’s operational and management processes.',
+      'Actively engaged in feature development, performance optimization, bug fixing, and UI/UX improvements across multiple mobile applications within the Cerebrum ecosystem',
+    ],
+  },
+  {
+    image: '/careers/rzf-software.png',
+    title: 'Mobile Developer',
+    linkTitle: 'RzfSoftware',
+    link: '',
+    company: 'RZF Software',
+    location: 'Kuningan, Indonesia',
+    countryCode: 'ID',
+    startDate: new Date('2022-07-01'),
+    endDate: new Date('2024-10-01'),
+    workingType: 'Intern & Full-time',
+    workingSchema: 'Onsite',
+    responsibilities: [
+      'Develop mobile applications based on market needs.',
+      'Develop mobile applications for specific client projects.',
+      'Collaborate closely with clients to understand project requirements and expectations.',
+      'Ensure the final product is not only functional but also intuitive and user-friendly.',
+      'Ensure the highest standards in user experience, performance, and usability across all applications developed.',
+    ],
+  },
+];
+export const educations: Education[] = [
+  {
+    image: '/images/last-education.png',
+    univ: 'SMK JAGARA',
+    major: 'Computer and Network Engineering',
+    link: 'Kuningan',
+    location: 'Bandung, Indonesia',
+    countryCode: 'ID',
+    endDate: new Date('2023-06-1'),
   },
 ];

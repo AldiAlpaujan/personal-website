@@ -25,8 +25,9 @@ export default function ProjectCard({
     >
       <div
         className={cn(
-          'group h-fit flex flex-col gap-4 bg-project-card border-[1.8px] rounded-lg overflow-clip dark:border-project-card cursor-pointer break-inside-avoid',
+          'group h-full flex flex-col gap-4 bg-project-card border-[1.8px] rounded-lg overflow-clip dark:border-project-card cursor-pointer break-inside-avoid',
           isLatestProject && 'w-[264px]',
+          project.hidden && 'hidden',
           className
         )}
       >

@@ -1,4 +1,5 @@
 import PageHeader from '@/components/PageHeader';
+import TabsView from './components/TabsView';
 
 export default function About() {
   return (
@@ -8,6 +9,7 @@ export default function About() {
         description={'Let me share a bit about who i am'}
         hideCvButton
       />
+      <TabsView />
     </>
   );
 }

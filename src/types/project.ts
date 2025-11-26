@@ -6,4 +6,5 @@ export interface Project {
   description: string;
   techUsed: TechType[];
   link?: string;
+  hidden?: boolean;
 }
