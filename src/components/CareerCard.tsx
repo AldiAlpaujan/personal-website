@@ -24,26 +24,26 @@ export default function CareerCard({ career }: { career: Career }) {
       <div className="flex-1">
         <div className="flex flex-col gap-1">
           <h1 className="font-semibold text-foreground text-lg">{career.title}</h1>
-          <div className="flex gap-3 text-sm text-tertiary-foreground">
+          <div className="flex flex-wrap gap-3 text-sm text-tertiary-foreground">
             <Link href={career.link} target="_blank">
               <p>{career.linkTitle}</p>
             </Link>
-            <div className="size-1 bg-secondary rounded-full mt-2" />
+            <div className="size-1 bg-secondary rounded-full mt-2 hidden sm:block" />
             <p className="text-secondary-foreground">{`[ ${career.company} ]`}</p>
-            <div className="size-1 bg-secondary rounded-full mt-2" />
+            <div className="size-1 bg-secondary rounded-full mt-2 hidden sm:block" />
             <p>
               {career.location} <span className="text-[10px]">{career.countryCode}</span>
             </p>
           </div>
-          <div className="flex gap-3 text-sm text-tertiary-foreground">
+          <div className="flex flex-wrap gap-3 text-sm text-tertiary-foreground">
             <p>{`${formatDate(career.startDate.toString(), 'MMM YYYY')} - ${formatDate(career.endDate.toString(), 'MMM YYYY')}`}</p>
-            <div className="size-1 bg-secondary rounded-full mt-2" />
+            <div className="size-1 bg-secondary rounded-full mt-2 hidden sm:block" />
             <p className="text-secondary-foreground">
               {getDurationLabel(career.startDate, career.endDate)}
             </p>
-            <div className="size-1 bg-secondary rounded-full mt-2" />
+            <div className="size-1 bg-secondary rounded-full mt-2 hidden sm:block" />
             <p>{career.workingType}</p>
-            <div className="size-1 bg-secondary rounded-full mt-2" />
+            <div className="size-1 bg-secondary rounded-full mt-2 hidden sm:block" />
             <p>{career.workingSchema}</p>
           </div>
         </div>
