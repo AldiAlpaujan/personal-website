@@ -5,7 +5,7 @@ import { Project } from '@/types/project';
 export type TechIconType = { name: string; label: string; icon: string; themeCamo?: boolean };
 
 export const techIcons: TechIconType[] = [
-  { name: 'css', label: 'Css', icon: '/tech-icons/Css.svg' },
+  { name: 'css', label: 'Css', icon: '/tech-icons/CSS.svg' },
   { name: 'dart', label: 'Dart', icon: '/tech-icons/Dart.svg' },
   { name: 'express', label: 'Express', icon: '/tech-icons/Express.svg', themeCamo: true },
   { name: 'firebase', label: 'Firebase', icon: '/tech-icons/Firebase.svg' },
