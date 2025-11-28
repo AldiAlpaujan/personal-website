@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   description: 'This is my personal website',
 };
 
+// Main Start
 export default function RootLayout({
   children,
 }: Readonly<{
