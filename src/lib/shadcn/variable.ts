@@ -30,11 +30,20 @@ export const techIcons: TechIconType[] = [
 
 export const projects: Project[] = [
   {
+    image: '/projects/ab-media.png',
+    title: 'AB Media',
+    description:
+      'AB Media  is an all-in-one digital platform for content and daily services, enabling users to read e-books, stream videos, listen to radio, and complete PPOB payments.It also includes Muslim Pocket, offering prayer reminders, Hijri calendar, mosque locator, and digital Qur’an features to support everyday spiritual activities.',
+    techUsed: ['flutter', 'dart', 'firebase', 'sqlite'],
+    link: 'https://play.google.com/store/apps/details?id=com.pustakaalbahjah.mobile&hl=id',
+  },
+  {
     image: '/projects/personal website.png',
     title: 'Personal Website',
     description:
       'A modern personal website built with Next.js and React, showcasing my portfolio, projects, and skills. It features a clean and responsive design, smooth navigation, and reusable components styled with Tailwind CSS and Shadcn UI. The site is fully type-safe with TypeScript for better maintainability.',
     techUsed: ['nextjs', 'reactjs', 'typescript', 'tailwindcss', 'shadcn'],
+    link: 'https://aldi-portfolio.vercel.app',
   },
   {
     image: '/projects/my-kbihu.png',
@@ -131,6 +140,24 @@ export const projects: Project[] = [
 
 export const careers: Career[] = [
   {
+    image: '/careers/self-employed.png',
+    title: 'Software Engineer',
+    linkTitle: 'My Website',
+    link: 'https://aldi-portfolio.vercel.app',
+    company: 'Self Employed ',
+    location: 'Kuningan, Indonesia',
+    countryCode: 'ID',
+    startDate: new Date('2025-09-01'),
+    endDate: new Date(),
+    workingType: 'Full-time',
+    workingSchema: 'Onsite',
+    responsibilities: [
+      'Develop custom mobile and web applications using flutter & react, for various clients across different industries.',
+      'Design and implement user-friendly interfaces ensuring optimal user experience using figma.',
+      'Maintain and update existing applications based on client feedback and evolving needs.',
+    ],
+  },
+  {
     image: '/careers/cerebrum.png',
     title: 'Mobile Engineer',
     linkTitle: 'Cerebrum.id',
@@ -171,7 +198,17 @@ export const careers: Career[] = [
     ],
   },
 ];
+
 export const educations: Education[] = [
+  {
+    image: '/images/ut.png',
+    univ: 'Universitas Terbuka',
+    major: 'Information Systems (Undergraduate)',
+    link: '',
+    location: 'Bandung, Indonesia',
+    countryCode: 'ID',
+    endDate: new Date('2030-06-1'),
+  },
   {
     image: '/images/last-education.png',
     univ: 'SMK JAGARA',
