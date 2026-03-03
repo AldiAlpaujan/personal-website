@@ -8,7 +8,7 @@ export default function Resume() {
   return (
     <Card className="h-[885px]">
       <Link
-        href="https://drive.google.com/file/d/141QU50SAi5MLwRD8IbkeMtNAKETrOZrp/view?usp=drive_link"
+        href="https://drive.google.com/file/d/1p0pMZAV5lAEYpebWmyAo5QBtf7nThWT4/view?usp=drivesdk"
         target="_blank"
         className="w-fit"
       >

@@ -26,7 +26,7 @@ export default function PageHeader(props: {
       <div className="hidden md:flex gap-2.5">
         {!props.hideCvButton && (
           <Link
-            href="https://drive.google.com/file/d/141QU50SAi5MLwRD8IbkeMtNAKETrOZrp/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1p0pMZAV5lAEYpebWmyAo5QBtf7nThWT4/view?usp=drivesdk"
             target="_blank"
           >
             <Button>
