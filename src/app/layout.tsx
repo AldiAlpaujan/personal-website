@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Onest } from 'next/font/google';
 import './globals.css';
+import CursorBackground from '@/components/CursorBackground';
 import AppLayout from '@/components/layouts/AppLayout';
 import Sidebar from '@/components/Sidebar/Sidebar';
 import { Toaster } from '@/lib/shadcn/ui/sonner';
@@ -26,7 +27,7 @@ export default function RootLayout({
       <body
         className={`${onestSans.variable} ${onestSans.className} relative h-fit w-full antialiased`}
       >
-        <div className="fixed inset-0 -z-10 bg-background opacity-30 bg-[radial-gradient(#757575_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <CursorBackground />
         <AppLayout sidebar={<Sidebar />}>{children}</AppLayout>
         <Toaster />
       </body>

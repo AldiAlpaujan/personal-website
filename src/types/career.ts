@@ -7,7 +7,7 @@ export interface Career {
   location: string;
   countryCode: string;
   startDate: Date;
-  endDate: Date;
+  endDate: Date | null;
   workingType: string;
   workingSchema: 'Onsite' | 'hybrid' | 'Remote';
   responsibilities: string[];

@@ -30,6 +30,14 @@ export const techIcons: TechIconType[] = [
 
 export const projects: Project[] = [
   {
+    image: '/projects/epruvo.png',
+    title: 'Epruvo',
+    description:
+      'Epruvo is an all-in-one digital platform for document approval and procurement, enabling teams to submit forms, route approvals, and sign documents electronically. It also includes a drag-and-drop signature editor, real-time approval tracking, department and user management, and QR-based signature verification to support secure, paperless workflows across the entire organization.',
+    techUsed: ['reactjs', 'typescript', 'tailwindcss', 'mantine', 'vite'],
+    link: '',
+  },
+  {
     image: '/projects/ab-media.png',
     title: 'AB Media',
     description:
@@ -140,6 +148,26 @@ export const projects: Project[] = [
 
 export const careers: Career[] = [
   {
+    image: '/careers/csv.jpeg',
+    title: 'Full Stack Engineer',
+    linkTitle: 'CSV',
+    link: '',
+    company: 'PT Cahaya Sani Vokasi',
+    location: 'Tangerang, Indonesia',
+    countryCode: 'ID',
+    startDate: new Date('2026-04-01'),
+    endDate: null,
+    workingType: 'Full-time',
+    workingSchema: 'Onsite',
+    responsibilities: [
+      "Design and develop the company's internal HRIS (Human Resource Information System) using Flutter, supporting multiple business flavors under one shared codebase.",
+      'Integrate Firebase for authentication, push notifications, and backend services.',
+      'Implement state management architecture using Riverpod for scalable and maintainable mobile app development.',
+      'Collaborate directly with internal stakeholders to translate operational needs into functional system requirements.',
+      'Handle end-to-end technical support, from application development to deployment across Android and iOS platforms.',
+    ],
+  },
+  {
     image: '/careers/self-employed.png',
     title: 'Software Engineer',
     linkTitle: 'My Website',
@@ -148,7 +176,7 @@ export const careers: Career[] = [
     location: 'Kuningan, Indonesia',
     countryCode: 'ID',
     startDate: new Date('2025-09-01'),
-    endDate: new Date(),
+    endDate: null,
     workingType: 'Full-time',
     workingSchema: 'Onsite',
     responsibilities: [

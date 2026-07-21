@@ -36,7 +36,7 @@ export default function CareerCard({ career }: { career: Career }) {
             </p>
           </div>
           <div className="flex flex-wrap gap-3 text-sm text-tertiary-foreground">
-            <p>{`${formatDate(career.startDate.toString(), 'MMM YYYY')} - ${formatDate(career.endDate.toString(), 'MMM YYYY')}`}</p>
+            <p>{`${formatDate(career.startDate.toString(), 'MMM YYYY')} - ${career.endDate ? formatDate(career.endDate.toString(), 'MMM YYYY') : 'Present'}`}</p>
             <div className="size-1 bg-secondary rounded-full mt-2 hidden sm:block" />
             <p className="text-secondary-foreground">
               {getDurationLabel(career.startDate, career.endDate)}
