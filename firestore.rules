@@ -1,0 +1,13 @@
+rules_version = '2';
+
+// This app never touches Firestore from the browser: all reads/writes go through
+// the Firebase Admin SDK on the server (src/lib/firebase/admin.ts), which bypasses
+// these rules entirely. The Firebase client SDK is used only for admin login (Auth).
+// So the safest posture is to deny ALL direct client access to Firestore.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

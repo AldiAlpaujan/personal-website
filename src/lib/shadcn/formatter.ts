@@ -16,14 +16,15 @@ export function formatDate(val: string | null | undefined, pattern: string): str
   return date.locale('id').format(pattern);
 }
 
-export function getDurationLabel(start: Date, end: Date) {
-  const years = end.getFullYear() - start.getFullYear();
-  const months = end.getMonth() - start.getMonth();
+export function getDurationLabel(start: Date, end: Date | null) {
+  const endDate = end ?? new Date();
+  const years = endDate.getFullYear() - start.getFullYear();
+  const months = endDate.getMonth() - start.getMonth();
 
   let totalMonths = years * 12 + months;
 
   // Kalau tanggal akhir belum melewati tanggal mulai, kurangi 1 bulan
-  if (end.getDate() < start.getDate()) {
+  if (endDate.getDate() < start.getDate()) {
     totalMonths -= 1;
   }
 

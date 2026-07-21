@@ -1,4 +1,4 @@
-export interface Career {
+export interface CareerInput {
   image: string;
   title: string;
   linkTitle: string;
@@ -7,8 +7,16 @@ export interface Career {
   location: string;
   countryCode: string;
   startDate: Date;
-  endDate: Date;
+  endDate: Date | null;
   workingType: string;
   workingSchema: 'Onsite' | 'hybrid' | 'Remote';
   responsibilities: string[];
+  order?: number;
+}
+
+export interface Career extends CareerInput {
+  id: string;
+  order: number;
+  createdAt: Date;
+  updatedAt: Date;
 }

@@ -4,10 +4,10 @@ import { useEffect, useState } from 'react';
 import ProjectCard from '@/components/ProjectCard';
 import { useMatchWidth } from '@/hooks/useMatchWidth';
 import { projects } from '@/lib/shadcn/variable';
-import { Project } from '@/types/project';
+import { ProjectInput } from '@/types/project';
 
 export default function ProjectList() {
-  const [sortedProjects, setSortedProjects] = useState<Project[]>([]);
+  const [sortedProjects, setSortedProjects] = useState<ProjectInput[]>([]);
   const isMatch = useMatchWidth(640);
 
   useEffect(() => {

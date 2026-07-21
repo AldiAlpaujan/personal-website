@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { cn } from '@/lib/shadcn/utils';
 import { techIcons } from '@/lib/shadcn/variable';
-import { Project } from '@/types/project';
+import { ProjectInput } from '@/types/project';
 import { ConditionalWrapper } from './ConditionalWrapper';
 
 export default function ProjectCard({
@@ -10,7 +10,7 @@ export default function ProjectCard({
   isLatestProject = false,
   className,
 }: {
-  project: Project;
+  project: ProjectInput;
   isLatestProject?: boolean;
   className?: string;
 }) {

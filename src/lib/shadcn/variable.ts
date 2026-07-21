@@ -1,6 +1,6 @@
-import { Career } from '@/types/career';
-import { Education } from '@/types/education';
-import { Project } from '@/types/project';
+import { CareerInput } from '@/types/career';
+import { EducationInput } from '@/types/education';
+import { ProjectInput } from '@/types/project';
 
 export type TechIconType = { name: string; label: string; icon: string; themeCamo?: boolean };
 
@@ -28,7 +28,7 @@ export const techIcons: TechIconType[] = [
   { name: 'vite', label: 'Vite', icon: '/tech-icons/Vite.svg' },
 ];
 
-export const projects: Project[] = [
+export const projects: ProjectInput[] = [
   {
     image: '/projects/ab-media.png',
     title: 'AB Media',
@@ -138,7 +138,7 @@ export const projects: Project[] = [
   },
 ];
 
-export const careers: Career[] = [
+export const careers: CareerInput[] = [
   {
     image: '/careers/self-employed.png',
     title: 'Software Engineer',
@@ -199,7 +199,7 @@ export const careers: Career[] = [
   },
 ];
 
-export const educations: Education[] = [
+export const educations: EducationInput[] = [
   {
     image: '/images/ut.png',
     univ: 'Universitas Terbuka',

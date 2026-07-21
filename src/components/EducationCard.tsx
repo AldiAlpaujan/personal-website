@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { formatDate } from '@/lib/shadcn/formatter';
 import { Card } from '@/lib/shadcn/ui/card';
-import { Education } from '@/types/education';
+import { EducationInput } from '@/types/education';
 
-export default function EducationCard({ education }: { education: Education }) {
+export default function EducationCard({ education }: { education: EducationInput }) {
   return (
     <Card className="flex-row">
       <Image
