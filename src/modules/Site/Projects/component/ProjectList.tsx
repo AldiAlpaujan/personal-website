@@ -3,11 +3,10 @@
 import { useEffect, useState } from 'react';
 import ProjectCard from '@/components/ProjectCard';
 import { useMatchWidth } from '@/hooks/useMatchWidth';
-import { projects } from '@/lib/shadcn/variable';
-import { ProjectInput } from '@/types/project';
+import { Project } from '@/types/project';
 
-export default function ProjectList() {
-  const [sortedProjects, setSortedProjects] = useState<ProjectInput[]>([]);
+export default function ProjectList({ projects }: { projects: Project[] }) {
+  const [sortedProjects, setSortedProjects] = useState<Project[]>(projects);
   const isMatch = useMatchWidth(640);
 
   useEffect(() => {
@@ -20,12 +19,12 @@ export default function ProjectList() {
     } else {
       setSortedProjects(projects);
     }
-  }, [isMatch]);
+  }, [isMatch, projects]);
 
   return (
     <div className="columns-1 sm:columns-2 gap-3.5">
       {sortedProjects.map((project) => (
-        <ProjectCard key={project.title} project={project} className="mb-3.5" />
+        <ProjectCard key={project.id} project={project} className="mb-3.5" />
       ))}
     </div>
   );

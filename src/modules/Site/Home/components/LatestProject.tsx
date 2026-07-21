@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import ProjectCard from '@/components/ProjectCard';
 import { Card, CardTitle } from '@/lib/shadcn/ui/card';
-import { projects } from '@/lib/shadcn/variable';
+import { Project } from '@/types/project';
 
-export default function LatestProject() {
+export default function LatestProject({ projects }: { projects: Project[] }) {
   return (
     <Card className="px-0 py-4">
       <div className="flex justify-between items-center px-4">
@@ -18,7 +18,7 @@ export default function LatestProject() {
       <div className="w-full overflow-auto scrollbar-hide">
         <div className="w-fit flex gap-4 px-4 ">
           {projects.slice(0, 4).map((project) => (
-            <ProjectCard key={project.title} project={project} isLatestProject={true} />
+            <ProjectCard key={project.id} project={project} isLatestProject={true} />
           ))}
         </div>
       </div>

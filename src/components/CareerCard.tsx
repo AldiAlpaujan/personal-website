@@ -10,6 +10,7 @@ import {
 } from '@/lib/shadcn/ui/accordion';
 import { Card } from '@/lib/shadcn/ui/card';
 import { CareerInput } from '@/types/career';
+import { ConditionalWrapper } from './ConditionalWrapper';
 
 export default function CareerCard({ career }: { career: CareerInput }) {
   return (
@@ -25,9 +26,16 @@ export default function CareerCard({ career }: { career: CareerInput }) {
         <div className="flex flex-col gap-1">
           <h1 className="font-semibold text-foreground text-lg">{career.title}</h1>
           <div className="flex flex-wrap gap-3 text-sm text-tertiary-foreground">
-            <Link href={career.link} target="_blank">
+            <ConditionalWrapper
+              condition={Boolean(career.link)}
+              wrapper={(children) => (
+                <Link href={career.link} target="_blank">
+                  {children}
+                </Link>
+              )}
+            >
               <p>{career.linkTitle}</p>
-            </Link>
+            </ConditionalWrapper>
             <div className="size-1 bg-secondary rounded-full mt-2 hidden sm:block" />
             <p className="text-secondary-foreground">{`[ ${career.company} ]`}</p>
             <div className="size-1 bg-secondary rounded-full mt-2 hidden sm:block" />

@@ -16,7 +16,7 @@ export default function ProjectCard({
 }) {
   return (
     <ConditionalWrapper
-      condition={project.link !== undefined && project.link !== ''}
+      condition={Boolean(project.link)}
       wrapper={(children) => (
         <Link href={project.link!} target="_blank">
           {children}

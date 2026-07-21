@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Blog from '@/modules/Blog';
+import Blog from '@/modules/Site/Blog';
 
 export const metadata: Metadata = {
   title: 'Blog | Personal Website',

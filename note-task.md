@@ -14,7 +14,11 @@
   - [x] 1.11 Firebase project `personal-website-f8ccf` connected: Firestore + Email/Password Auth enabled, `.env.local` filled (client config + Admin SDK service account + ADMIN_UID), `npm run seed` run (14 projects / 3 careers / 2 educations). Auth + Firestore connection verified via Admin SDK. Firebase CLI installed as devDep + `firebase.json`/`.firebaserc`/`firestore.rules` (deny-all) scaffolded.
     - Remaining manual check: log in at `/admin/login` and do a CRUD walkthrough. Firestore still in **test mode** (open rules, expires ~30 days) — deploy the deny-all rules with `npx firebase login && npx firebase deploy --only firestore:rules` before going to prod.
 - [ ] 2. UI fixes (scope TBD — gather specifics from user when starting this task)
-- [ ] 3. Public site: SSR-only data fetching from Firestore (retire `variable.ts` content arrays, keep `techIcons` static)
+- [x] 3. Public site: SSR data fetching from Firestore
+  - [x] 3.1 Grouped public modules under `src/modules/Site/` (mirrors `Admin/`); app `(site)` pages import from `@/modules/Site/*`
+  - [x] 3.2 Module indexes are now async server components fetching via repositories (`getVisibleProjects`/`getCareers`/`getEducations`), passing data down as props (Home→LatestProject, Projects→ProjectList, About→TabsView→Career/Education)
+  - [x] 3.3 `/`, `/about`, `/projects` marked `dynamic = 'force-dynamic'` for fresh reads; `techIcons` kept static in `variable.ts`
+  - Note: `projects`/`careers`/`educations` arrays kept in `variable.ts` (still used by `scripts/seed-firestore.ts`); no longer imported by site components. Retire fully only if the seed script is retired too.
 - [ ] 4. UI polish
 
 Code for Task 1 is complete (typecheck + lint clean, public routes smoke-tested). What's left is manual: set up the Firebase project in the console (Firestore native mode, Authentication email/password provider, one admin user, a web app for client config, a service account key for the Admin SDK), fill `.env.local`, run `npm run seed` once, then log in at `/admin/login` and try creating/editing/deleting a project, career, and education.

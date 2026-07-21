@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Chatroom from '@/modules/Chatroom';
+import Chatroom from '@/modules/Site/Chatroom';
 
 export const metadata: Metadata = {
   title: 'Chatroom | Personal Website',

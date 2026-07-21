@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Contact from '@/modules/Contact';
+import Contact from '@/modules/Site/Contact';
 
 export const metadata: Metadata = {
   title: 'Contact | Personal Website',

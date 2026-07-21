@@ -1,10 +1,18 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/lib/shadcn/ui/tabs';
+import { Career as CareerType } from '@/types/career';
+import { Education as EducationType } from '@/types/education';
 import Career from './Career';
 import Education from './Education';
 import Intro from './Intro';
 import Resume from './Resume';
 
-export default function TabsView() {
+export default function TabsView({
+  careers,
+  educations,
+}: {
+  careers: CareerType[];
+  educations: EducationType[];
+}) {
   const tabs: { value: string; label: string; content: React.ReactNode }[] = [
     {
       value: 'intro',
@@ -19,12 +27,12 @@ export default function TabsView() {
     {
       value: 'career',
       label: 'Career',
-      content: <Career />,
+      content: <Career careers={careers} />,
     },
     {
       value: 'education',
       label: 'Education',
-      content: <Education />,
+      content: <Education educations={educations} />,
     },
   ];
   return (
