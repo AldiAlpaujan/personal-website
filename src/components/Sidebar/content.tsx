@@ -1,13 +1,5 @@
 import { ReactNode } from 'react';
-import {
-  Building2,
-  FileSignature,
-  Home,
-  LucideIcon,
-  MessageSquare,
-  Phone,
-  User,
-} from 'lucide-react';
+import { Building2, FileSignature, Home, LucideIcon, Phone, User } from 'lucide-react';
 
 export interface SidebarMenuItem {
   title: string;
@@ -40,11 +32,6 @@ export const menu: SidebarMenuItem[] = [
     title: 'Contact',
     url: '/contact',
     icon: Phone,
-  },
-  {
-    title: 'Chatroom',
-    url: '/chatroom',
-    icon: MessageSquare,
   },
 ];
 
